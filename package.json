@@ -1,0 +1,22 @@
+{
+  "name": "cleancode",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/toddeo/API-Math-Random.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/toddeo/API-Math-Random/issues"
+  },
+  "homepage": "https://github.com/toddeo/API-Math-Random#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}

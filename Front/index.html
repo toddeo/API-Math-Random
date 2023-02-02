@@ -13,12 +13,18 @@
   <script>
     const form = document.getElementById('form');
     form.addEventListener('submit', function(event) {
-      event.preventDefault();
+      // L'événement "submit" est annulé pour éviter la soumission du formulaire vers une page différente.
+      event.preventDefault(); 
+      // Les valeurs entrées pour "min" et "max" sont récupérées à partir du formulaire.
       const min = form.elements.min.value;
       const max = form.elements.max.value;
-      fetch(`http://localhost:5000/myMath/randomize?min=${min}&max=${max}`)
+      // La fonction "fetch" envoie une requête GET à l'API à l'adresse "http://localhost:5000/myMath/randomize?min=${min}&max=${max}"
+      //avec les valeurs de "min" et "max" passées en tant que paramètres dans l'URL.
+      fetch(`http://localhost:5000/myMath/randomize?min=${min}&max=${max}`) 
+        // La réponse de l'API, qui est attendue d'être en format JSON, est convertie en objet JavaScript en utilisant la méthode "json()".
         .then(response => response.json())
         .then(data => {
+          //Le résultat aléatoire retourné par l'API est affiché dans l'élément "result" en modifiant son contenu HTML en utilisant la propriété "innerHTML".
           document.getElementById('result').innerHTML = `Random number: ${data.randomNumber}`;
         });
     });
